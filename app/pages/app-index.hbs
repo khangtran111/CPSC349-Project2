@@ -1,6 +1,73 @@
 
-<h1 class="text-3xl font-bold underline text-blue-700">Welcome to the app!</h1>
-<div class="text-blue-700">[[ Dynamic Remake code goes here]]</div>
-<br><br>
+<div class="header">
+  <div
+    class="header__text"
+    object
+    key:board-heading="@innerText"
+    default:board-heading="My Projects"
+    edit:board-heading:without-remove
+  >{{boardHeading}}</div>
+  <button
+    class="button button--add-stack font-bold text-blue-500"
+    new:stack
+  >Add Note stack</button>
+</div>
+<div class="board-container">
+  <div
+    class="flex absolute top-32 right-1 bottom-0 left-0 overflow-x-auto pl-4 pb-2 mb-2"
+    array
+    key="stacks"
+    sortable="stacks"
+  >
+    {{#for stack in stacks}}
+      <div
+        class="flex-shrink-0 flex flex-col h-full mr-4 w-80"
+        object
+        key:stack-heading="@search"
+        default:stack-heading="A Project"
+      >
+        <div class="flex-shrink-0 flex pt-2 mb-3 text-gray-700">
+          <p
+            class="text-lg font-medium"
+            target:stack-heading="@innerText"
+            edit:stack-heading
+          >{{default stack.stackHeading "New stack item"}}</p>
+          <button
+            class="button button--plus-square"
+            new:card
+          >
 
-<a href="https://docs.remaketheweb.com/a-simple-example-app/">Try a simple todo app</a>
+          </button>
+        </div>
+        <div
+          class="flex-shrink overflow-x-hidden overflow-y-scroll pb-2 bg-gray-100 min-h-max rounded-t-md pb-2 pt-2"
+          key="cards"
+          array
+          sortable="cards"
+        >
+          {{#for card in stack.cards}}
+            <div
+              class="flex items-center w-full rounded text-gray-700 mt-2  cursor-pointer hover: bg-gray-100"
+              object
+              key:card-text="@search"
+              edit:card-text
+            >
+              <p
+                class="flex-shrink mt-4 mr-1 mb-4 ml-4 leading-6"
+                target:card-text="@innerText"
+              >{{default card.cardText "New card item"}}</p>
+            </div>
+          {{/for}}
+        </div>
+        <div class="p-2 bg-gray-100 rounded-lg">
+          <button
+            class="flex-shrink-0 flex items-center justify-center w-full h-10 rounded text-gray-700 text-center ml-auto mr-auto  outline-2 border-dashed cursor-pointer hover:bg-gray-300 border-gray-400"
+            new:card
+          >
+            <p>Add card</p>
+          </button>
+        </div>
+      </div>
+    {{/for}}
+  </div>
+</div>
