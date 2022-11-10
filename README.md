@@ -5,6 +5,7 @@ Zhiqiang Liu, zliu80@csu.fullerton.edu
 
 Khang Tran, ktran1405@csu.fullerton.edu
 
+Rodrigo Onate, ronategarcia@csu.fullerton.edu
 # Create an app! 🪂
 
 Create your first Remake app:
