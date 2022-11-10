@@ -1,6 +1,8 @@
 # Team Member:
 Quoc Le
 
+Zhiqiang Liu, zliu80@csu.fullerton.edu
+
 # Create an app! 🪂
 
 Create your first Remake app:
