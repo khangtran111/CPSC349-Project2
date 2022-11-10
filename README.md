@@ -1,7 +1,9 @@
 # Team Member:
 Quoc Le
-Khang Tran, ktran1405@csu.fullerton.edu
+
 Zhiqiang Liu, zliu80@csu.fullerton.edu
+
+Khang Tran, ktran1405@csu.fullerton.edu
 
 # Create an app! 🪂
 
