@@ -1,5 +1,5 @@
 # Team Member:
-Quoc Le
+Quoc Le, quoctle00@csu.fullerton.edu
 
 Zhiqiang Liu, zliu80@csu.fullerton.edu
 
